@@ -75,6 +75,7 @@ openbench supports 30+ model providers through Inspect AI. Set the appropriate A
 | **Helicone**          | `HELICONE_API_KEY`     | `helicone/model-name`            |
 | **Hugging Face**      | `HF_TOKEN`             | `huggingface/model-name`         |
 | **Hyperbolic**        | `HYPERBOLIC_API_KEY`   | `hyperbolic/model-name`          |
+| **Charm Hyper**       | `HYPER_API_KEY`        | `hyper/model-name`               |
 | **Lambda**            | `LAMBDA_API_KEY`       | `lambda/model-name`              |
 | **MiniMax**           | `MINIMAX_API_KEY`      | `minimax/model-name`             |
 | **Mistral**           | `MISTRAL_API_KEY`      | `mistral/model-name`             |
@@ -84,6 +85,7 @@ openbench supports 30+ model providers through Inspect AI. Set the appropriate A
 | **Novita AI**         | `NOVITA_API_KEY`       | `novita/model-name`              |
 | **Ollama**            | None (local)           | `ollama/model-name`              |
 | **OpenAI**            | `OPENAI_API_KEY`       | `openai/model-name`              |
+| **OpenCode Zen**      | `OPENCODE_ZEN_API_KEY` | `opencode_zen/model-name`        |
 | **OpenRouter**        | `OPENROUTER_API_KEY`   | `openrouter/model-name`          |
 | **Parasail**          | `PARASAIL_API_KEY`     | `parasail/model-name`            |
 | **Perplexity**        | `PERPLEXITY_API_KEY`   | `perplexity/model-name`          |

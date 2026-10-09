@@ -195,6 +195,22 @@ def siliconflow() -> Type[ModelAPI]:
     return SiliconFlowAPI
 
 
+@modelapi(name="opencode_zen")
+def opencode_zen() -> Type[ModelAPI]:
+    """Register OpenCode Zen provider."""
+    from .model._providers.opencode_zen import OpenCodeZenAPI
+
+    return OpenCodeZenAPI
+
+
+@modelapi(name="hyper")
+def hyper() -> Type[ModelAPI]:
+    """Register Charm Hyper provider."""
+    from .model._providers.hyper import HyperAPI
+
+    return HyperAPI
+
+
 def _override_builtin_groq_provider():
     """Replace Inspect AI's built-in groq provider with enhanced openbench version."""
     from inspect_ai._util.registry import _registry
