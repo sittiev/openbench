@@ -29,6 +29,7 @@ class ProviderType(str, Enum):
     GROQ = "groq"
     HELICONE = "helicone"
     HUGGINGFACE = "huggingface"
+    HYPER = "hyper"
     HYPERBOLIC = "hyperbolic"
     LAMBDA = "lambda"
     MINIMAX = "minimax"
@@ -38,6 +39,7 @@ class ProviderType(str, Enum):
     NOUS = "nous"
     NOVITA = "novita"
     OPENAI = "openai"
+    OPENCODE_ZEN = "opencode_zen"
     OPENROUTER = "openrouter"
     PARASAIL = "parasail"
     PERPLEXITY = "perplexity"
@@ -224,6 +226,15 @@ PROVIDER_CONFIGS: Dict[ProviderType, ProviderConfig] = {
         supports_vision=False,
         supports_function_calling=True,
     ),
+    ProviderType.HYPER: ProviderConfig(
+        name="hyper",
+        display_name="Charm Hyper",
+        api_key_env="HYPER_API_KEY",
+        base_url="https://hyper.charm.land/v1",
+        base_url_env="HYPER_BASE_URL",
+        supports_vision=True,
+        supports_function_calling=True,
+    ),
     ProviderType.LAMBDA: ProviderConfig(
         name="lambda",
         display_name="Lambda",
@@ -290,6 +301,16 @@ PROVIDER_CONFIGS: Dict[ProviderType, ProviderConfig] = {
         display_name="OpenAI",
         api_key_env="OPENAI_API_KEY",
         base_url="https://api.openai.com/v1",
+        supports_vision=True,
+        supports_function_calling=True,
+    ),
+    ProviderType.OPENCODE_ZEN: ProviderConfig(
+        name="opencode_zen",
+        display_name="OpenCode Zen",
+        api_key_env="OPENCODE_ZEN_API_KEY",
+        base_url="https://opencode.ai/zen/v1",
+        base_url_env="OPENCODE_ZEN_BASE_URL",
+        additional_env_vars=["OPENCODE_API_KEY"],
         supports_vision=True,
         supports_function_calling=True,
     ),
